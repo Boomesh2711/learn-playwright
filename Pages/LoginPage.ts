@@ -21,6 +21,7 @@ export default class LoginPage {
     async clickLoginbtn() {
         await Promise.all([ 
             this.page.waitForNavigation(),
+            this.page.waitForTimeout(3000),
          this.page.locator("input[type='submit']").click()
         ]);
     }
