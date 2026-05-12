@@ -2,8 +2,10 @@
 import type { PlaywrightTestConfig } from '@playwright/test';
 
 const config: PlaywrightTestConfig = {
- // testMatch: ["tests/basicinteractions.test.ts"],
+  testDir: './',
+  testMatch: ["**/PomTest/pomtest.ts"],
   use: {
+    baseURL:"https://ecommerce-playground.lambdatest.io/index.php?",
     headless: false,
     screenshot:"on",
     video:"on",
@@ -67,7 +69,6 @@ export default config;
 
 //   ] 
 // });
-
 
 
 
