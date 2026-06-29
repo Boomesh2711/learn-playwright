@@ -1,9 +1,19 @@
 
-import type { PlaywrightTestConfig } from '@playwright/test';
+import { devices, type PlaywrightTestConfig } from '@playwright/test';
 
 const config: PlaywrightTestConfig = {
+  projects:[
+    {
+      name: 'chromium',
+      use: { ...devices['Desktop Chrome'] }
+    },
+    {
+      name: 'firefox',
+      use: { ...devices['Desktop Firefox'] }
+    }
+  ],
   testDir: './',
-  testMatch: ["**/PomTest/pomtest.ts"],
+  //testMatch: ["PomTest/pomtestUsingFixture.ts"],
   use: {
     baseURL:"https://ecommerce-playground.lambdatest.io/index.php?",
     headless: false,

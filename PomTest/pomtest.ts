@@ -38,7 +38,7 @@ test("Mega menu test3", async ({ page , baseURL}) => {
     await homepage.clickonMegaMenu();
     await megamenu.add1stitemtocart();
     expect(await megamenu.IsToastVisible()).toBe(true);
-})
+}) 
 
 })
 

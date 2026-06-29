@@ -12,11 +12,14 @@ test("Login test demo", async (  ) => {
     await page.fill("input[name='email']", "boomesh@gamil.com");
     await page.fill("input[name='password']", "Admin@123");
     await page.click("input[value='Login']");
+    await page.close();
+    await context.close();
+    await browser.close();
     await page.waitForTimeout(5000);
     const Page1 = await context.newPage();
     await Page1.goto("https://ecommerce-playground.lambdatest.io/");
     await Page1.waitForTimeout(5000);
-   // await Page1.hover("//a[@data-toggle='dropdown']//span[contains(.,'My account')]");
+   await Page1.hover("//a[@data-toggle='dropdown']//span[contains(.,'My account')]");
 
 
 });

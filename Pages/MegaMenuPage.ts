@@ -1,6 +1,6 @@
 import {Page} from "@playwright/test";
 
-export default class SpecialPage{
+export default class MegaMenuPage {
     constructor (public page: Page){
 
     }
